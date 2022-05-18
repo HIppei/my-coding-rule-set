@@ -3,6 +3,14 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./"
+      }
     }
   },
   "env": {
@@ -20,10 +28,14 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:react-redux/recommended",
     "react-app",
     "react-app/jest"
   ],
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": { "no-const-assign": ["error"] }
+  "plugins": ["react", "@typescript-eslint", "import"],
+  "rules": { "no-const-assign": ["error"], "import/no-unresolved": "error" }
 }
