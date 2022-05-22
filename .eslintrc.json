@@ -4,9 +4,6 @@
     "react": {
       "version": "detect"
     },
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
-    },
     "import/resolver": {
       "typescript": {
         "project": "./"
@@ -36,6 +33,6 @@
     "react-app",
     "react-app/jest"
   ],
-  "plugins": ["react", "@typescript-eslint", "import"],
+  "plugins": ["@typescript-eslint", "import"],
   "rules": { "no-const-assign": ["error"], "import/no-unresolved": "error" }
 }
